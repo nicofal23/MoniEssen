@@ -12,7 +12,7 @@
 .modal-contenido {
     background-color: white;
     width: 50%;
-    max-width: 400px; 
+    max-width: 400px;
     margin: 100px auto;
     padding: 20px;
     position: relative;
@@ -24,36 +24,43 @@
     right: 10px;
     cursor: pointer;
 }
+
 body {
     background-image: url(../assets/img/fondoessen.png);
     background-size: cover;
 }
+
 .moniessen {
     width: 9.375rem;
     height: 9.375rem;
     margin: 20px;
 }
+
 .header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+
     div {
         display: flex;
         align-items: center;
         margin: 30px;
+
         nav {
             ul {
                 display: flex;
                 flex-direction: row;
                 list-style: none;
                 gap: .9375rem;
-                li{
+
+                li {
                     a {
                         text-decoration: none;
                         color: #e878a2;
                         position: relative;
                         font-size: 20px;
+
                         &::before {
                             content: '';
                             position: absolute;
@@ -67,11 +74,48 @@ body {
                             transform-origin: center;
                             transition: transform 0.5s ease-in-out;
                         }
+
                         &:hover::before {
                             transform: scaleX(1);
                         }
                     }
+                }
             }
         }
     }
-    }}
+}
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    text-align: center;
+    -webkit-animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@-webkit-keyframes slide-bottom {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+    }
+}
+@keyframes slide-bottom {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+    }
+}
+.contenedor {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
