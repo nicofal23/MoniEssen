@@ -37,9 +37,11 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
     div {
         display: flex;
         align-items: center;
+        margin: 30px;
         nav {
             ul {
                 display: flex;
@@ -47,14 +49,11 @@ body {
                 list-style: none;
                 gap: .9375rem;
                 li{
-                    border: 2px solid #98c3ad;
-                    border-radius: 50%;
-                    padding: 10px;
-                    background-color: #ddf3e8;
                     a {
                         text-decoration: none;
-                        color: black;
+                        color: #e878a2;
                         position: relative;
+                        font-size: 20px;
                         &::before {
                             content: '';
                             position: absolute;
