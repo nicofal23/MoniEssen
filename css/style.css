@@ -33,7 +33,8 @@ body {
 
 .header {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  flex-wrap: wrap; }
   .header div {
     display: flex;
     align-items: center; }
