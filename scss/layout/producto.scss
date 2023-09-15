@@ -14,7 +14,10 @@
     justify-content: end;
     margin: 20px;
 }
-
+.col-md-4 {
+    display: flex;
+    justify-content: center;
+}
 
 .card {
     width: 70%;
