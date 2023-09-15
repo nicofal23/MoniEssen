@@ -1,0 +1,11 @@
+.form {
+    display: flex;
+    justify-content: center;
+    div {
+        iframe {
+            width: 640px;
+            height: 1799px;
+            padding: 0px;
+        }
+    }
+}
