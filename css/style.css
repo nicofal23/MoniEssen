@@ -252,3 +252,7 @@ body {
   .header div nav ul {
     display: flex;
     flex-direction: column; } }
+
+@media (max-width: 768px) {
+  .row {
+    gap: 25px; } }
