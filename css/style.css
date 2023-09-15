@@ -36,6 +36,26 @@ body {
   height: 9.375rem;
   margin: 20px; }
 
+.container-fluid a {
+  text-decoration: none;
+  color: #e878a2;
+  position: relative;
+  font-size: 20px; }
+  .container-fluid a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #b47dcd, #e878a2, #eb85ab);
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.5s ease-in-out; }
+  .container-fluid a:hover::before {
+    transform: scaleX(1); }
+
 .header {
   display: flex;
   flex-direction: row;
