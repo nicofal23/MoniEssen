@@ -1,0 +1,12 @@
+@media (max-width: 435px) {
+    .header {
+        div {
+        nav {
+            ul{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+    }
+}
