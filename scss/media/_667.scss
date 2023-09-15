@@ -1,7 +1,7 @@
 @media (max-width: 673px) {
     .header {
         flex-direction: row-reverse;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         
     }
@@ -12,6 +12,8 @@
         }
     }
     .moniessen {
+        width: 3.125rem;
+        height: 3.125rem;
         margin: 0px;
     }
     .container-fluid {
