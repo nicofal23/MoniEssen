@@ -1,0 +1,61 @@
+
+.row {
+    margin-top: 0.9375rem;
+    margin-bottom: 0.9375rem;
+}
+.carrito {
+    img {
+        width: 40px;
+    }
+}
+.contenedorcarrito {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin: 20px;
+}
+
+
+.card {
+    width: 100%;
+    text-align: center;
+    &:hover {
+        filter: brightness(0.7);
+    }
+}
+
+.card-img-container {
+    position: relative;
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+}
+
+.card-description {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para el texto */
+    padding: 10px;
+}
+
+.card-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none;
+    cursor: pointer;
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.card-button:hover {
+    background-color: #0056b3; /* Cambia el color de fondo del botón al pasar el cursor sobre él */
+}
