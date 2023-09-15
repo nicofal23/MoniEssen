@@ -176,7 +176,9 @@ body {
     height: 3.125rem;
     margin: 0px; }
   .container-fluid {
-    margin: 0px; } }
+    margin: 0px; }
+  .navbar {
+    width: 112px; } }
 
 @media (max-width: 435px) {
   .header div nav ul {
