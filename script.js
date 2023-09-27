@@ -33,28 +33,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Event listener para redirigir al usuario a la página de detalles del carrito
-    carrito.addEventListener("click", function () {
-        window.location.href = "carrito.html";
-    });
+  // Código para redirigir a la página de carrito cuando se hace clic en un botón u elemento con el id "carrito"
+document.getElementById("carrito").addEventListener("click", function () {
+    window.location.href = "carrito.html";
+});
 
-    // Función para actualizar el almacenamiento local
-    function actualizarLocalStorage() {
-        localStorage.setItem("carrito", JSON.stringify(carritoCompras));
+// Código para mostrar los productos en la página de carrito.html
+if (window.location.href.endsWith("carrito.html")) {
+    const detallesCarrito = document.getElementById("detallesCarrito");
+    const carritoCompras = JSON.parse(localStorage.getItem("carrito")) || {};
+
+    for (const idProducto in carritoCompras) {
+        const producto = carritoCompras[idProducto];
+        const productoHTML = getElementById("div");
+        const parrafo = document.createElement("p");
+        parrafo.textContent = `${producto.nombre}: ${producto.cantidad}`;
+        parrafo.classList.add("detalle-producto"); // Agregar una clase CSS
+        productoHTML.appendChild(parrafo);
+        detallesCarrito.appendChild(productoHTML);
     }
+}
 
-    // Código adicional para la página de detalles del carrito
-    if (window.location.href.endsWith("carrito.html")) {
-        const detallesCarrito = document.getElementById("detallesCarrito");
-        const carritoCompras = JSON.parse(localStorage.getItem("carrito")) || {};
-
-        for (const idProducto in carritoCompras) {
-            const producto = carritoCompras[idProducto];
-            const productoHTML = document.createElement("div");
-            const parrafo = document.createElement("p");
-            parrafo.textContent = `${producto.nombre}: ${producto.cantidad}`;
-            parrafo.classList.add("detalle-producto"); // Agregar una clase CSS
-            productoHTML.appendChild(parrafo);
-            detallesCarrito.appendChild(productoHTML);
-        }
-    }
 });

@@ -1,5 +1,12 @@
-@media (max-width: 768px){
+@media (max-width: 991px){
     .row {
         gap: 25px;
+    }
+    header {
+        justify-content: center;
+        .header {
+            display: flex;
+            flex-direction: column;
+        }
     }
 }

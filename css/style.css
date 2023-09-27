@@ -236,6 +236,11 @@ header {
   /* Espacio entre párrafos */
   /* Agrega otros estilos según tus preferencias */ }
 
+.carrito {
+  border: none; }
+  .carrito button {
+    border: none; }
+
 @media (max-width: 831px) {
   .essen {
     flex-direction: column; } }
@@ -262,6 +267,11 @@ header {
     display: flex;
     flex-direction: column; } }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .row {
-    gap: 25px; } }
+    gap: 25px; }
+  header {
+    justify-content: center; }
+    header .header {
+      display: flex;
+      flex-direction: column; } }
