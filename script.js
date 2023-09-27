@@ -65,7 +65,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("DOMContentLoaded", function () {
         const boton = document.getElementById("boton");
         boton.addEventListener("click", function (event) {
-            event.preventDefault(); // Evita el comportamiento por defecto del enlace
             // Obtener el carrito de compras almacenado en el almacenamiento local
             const carritoCompras = JSON.parse(localStorage.getItem("carrito")) || {};
             // Crear una lista de productos para el mensaje
