@@ -2,11 +2,25 @@
     font-size: 16px; /* Tamaño de fuente */
     color: #333; /* Color de texto */
     margin: 5px 0; /* Espacio entre párrafos */
-    /* Agrega otros estilos según tus preferencias */
 }
 .carrito {
+    background-color: transparent;
     border: none;
     button {
+        background-color: transparent;
         border: none;
     }
+}
+.compras {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.compra {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
 }
