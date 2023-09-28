@@ -46,20 +46,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     const detallesCarrito = document.getElementById("detallesCarrito");
-    
     // Obtener el carrito de compras almacenado en el almacenamiento local
     const carritoCompras = JSON.parse(localStorage.getItem("carrito")) || {};
-
     // Recorre los productos en el carrito y crea elementos HTML para mostrarlos
     for (const idProducto in carritoCompras) {
         const cantidad = carritoCompras[idProducto];
-        const productoHTML = document.createElement("div");
+        // Crear un contenedor para el texto y el botón de eliminar
+        const productoContainer = document.createElement("div");
+        // Crear el párrafo para el texto
         const parrafo = document.createElement("p");
-        parrafo.textContent = `Nombre del producto: ${idProducto}, Cantidad: ${cantidad}`;
+        parrafo.style.cssText = "color: #e878a2; font-size: 19px; font-family: 'mooli', sans-serif;";
+        parrafo.textContent = `Producto: ${idProducto}  `;
         parrafo.classList.add("detalle-producto");
-        productoHTML.appendChild(parrafo);
-        detallesCarrito.appendChild(productoHTML);
+        // Establecer display: inline-block para el párrafo
+        parrafo.style.display = "inline-block";
+        // Agregar el párrafo al contenedor
+        productoContainer.appendChild(parrafo);
+        // Agregar un botón de eliminar
+        const botonEliminar = document.createElement("button");
+        botonEliminar.textContent = "  X  ";
+        botonEliminar.classList.add("eliminar-producto");
+        botonEliminar.addEventListener("click", function() {
+            // Eliminar el producto del carrito
+            delete carritoCompras[idProducto];
+            // Actualizar el carrito en el almacenamiento local
+            localStorage.setItem("carrito", JSON.stringify(carritoCompras));
+            // Eliminar el elemento del DOM
+            productoContainer.remove();
+        });
+        // Establecer display: inline-block para el botón de eliminar
+        botonEliminar.style.display = "inline-block";
+        // Agregar el botón de eliminar al contenedor
+        productoContainer.appendChild(botonEliminar);
+        // Agregar el contenedor al detalle del carrito
+        detallesCarrito.appendChild(productoContainer);
     }
+
 
     //evento para enviar el msj por whatsapp
     document.getElementById("boton").addEventListener("click", function () {

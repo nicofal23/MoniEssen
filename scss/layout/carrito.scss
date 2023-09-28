@@ -17,12 +17,12 @@
     align-items: center;
 }
 .compra {
-    background-color: white;
+    background-color: #B0E0D2;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 50%;
+    width: 70%;
 }
 .contenedorcarrito {
     display: flex;
@@ -30,3 +30,42 @@
     justify-content: space-evenly;
     margin: 2.5rem;
 }
+.buttone {
+        margin: 20px;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+        .buttone:hover {
+        background-color: #45a049;
+    }
+        .buttone:active {
+        background-color: #3e8e41;
+    }
+
+/* Estilo para el botón de eliminar */
+.eliminar-producto {
+    background-color: #ff3333; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 50%; /* Forma redonda */
+    width: 30px; /* Ancho */
+    height: 30px; /* Alto */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar cursor al pasar el ratón */
+}
+
+/* Estilo para el botón de eliminar al pasar el ratón por encima */
+.eliminar-producto:hover {
+    background-color: #ff0000; /* Cambiar color de fondo al pasar el ratón */
+}
+
+.detallesc {
+    color: #e878a2;
+    text-decoration: underline; /* Aplicar subrayado */
+    text-underline-position: under; /* Colocar el subrayado debajo del texto */
+}
+
