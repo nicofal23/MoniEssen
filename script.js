@@ -78,68 +78,18 @@ document.addEventListener("DOMContentLoaded", function () {
         // Abre una nueva ventana o pestaña del navegador con el enlace de WhatsApp
         window.open(url, "_blank");
     });
-
-    // Obtener el formulario y el botón
-    const navegacionForm = document.getElementById("navegacionForm");
-    const irASeccionButton = document.getElementById("irASeccion");
-    const seccionSelect = document.getElementById("seccion");
-
-    // Evento para redirigir al usuario a la página correspondiente
-    irASeccionButton.addEventListener("click", function (event) {
-        event.preventDefault(); // Evitar el envío del formulario
-
-        // Obtener el valor seleccionado en el campo de selección
-        const seccionSeleccionada = seccionSelect.value;
-
-        // Redirigir al usuario a la página correspondiente
-        if (seccionSeleccionada) {
-            window.location.href = seccionSeleccionada;
-        }
-    });
-    // document.addEventListener("DOMContentLoaded", function () {
-    //     const boton = document.getElementById("boton");
-    //     boton.addEventListener("click", function (event) {
-    //         // Obtener el carrito de compras almacenado en el almacenamiento local
-    //         const carritoCompras = JSON.parse(localStorage.getItem("carrito")) || {};
-    //         // Crear una lista de productos para el mensaje
-    //         const listaProductos = [];
-    //         for (const idProducto in carritoCompras) {
-    //             const cantidad = carritoCompras[idProducto].cantidad;
-    //             const nombreProducto = carritoCompras[idProducto].nombre;
-    //             listaProductos.push(`${nombreProducto} - Cantidad: ${cantidad}`);
-    //         }
-    //         // Crear el mensaje con la lista de productos
-    //         const mensajeProductos = listaProductos.join("\n");
-    //         // URL base de WhatsApp
-    //         const urlWhatsAppBase = "https://api.whatsapp.com/send?phone=+5493416488215&text=";
-    //         // Combinar la URL base y el mensaje predefinido
-    //         const urlWhatsApp = urlWhatsAppBase + encodeURIComponent("Me interesan los siguientes productos") + " " + encodeURIComponent(mensajeProductos);
-    //         // Redirigir al usuario a WhatsApp con el mensaje
-    //         window.location.href = urlWhatsApp;
-    //     });
-    // });
 });
+// Obtener el elemento <select>
+const seccionSelect = document.getElementById("seccion");
 
-
-    // Event listener para redirigir al usuario a la página de detalles del carrito
-    // Código para redirigir a la página de carrito cuando se hace clic en un botón u elemento con el id "carrito"
-    // document.getElementById("carrito").addEventListener("click", function () {
-    //     window.location.href = "carrito.html";
-    // });
-
-    // // Código para mostrar los productos en la página de carrito.html
-    // if (window.location.href.endsWith("carrito.html")) {
-    //     const detallesCarrito = document.getElementById("detallesCarrito");
-    //     const carritoCompras = JSON.parse(localStorage.getItem("carrito")) || {};
-
-    //     for (const idProducto in carritoCompras) {
-    //         const cantidad = carritoCompras[idProducto];
-    //         const productoHTML = document.createElement("div");
-    //         const parrafo = document.createElement("p");
-    //         parrafo.textContent = `ID del producto: ${idProducto}, Cantidad: ${cantidad}`;
-    //         parrafo.classList.add("detalle-producto");
-    //         productoHTML.appendChild(parrafo);
-    //         detallesCarrito.appendChild(productoHTML);
-    //     }
-    // }
+// Evento de cambio cuando se selecciona una opción
+seccionSelect.addEventListener("change", function () {
+    // Obtener la URL de la opción seleccionada
+    const urlSeleccionada = seccionSelect.value;
+    
+    // Redirigir al usuario a la página correspondiente
+    if (urlSeleccionada) {
+        window.location.href = urlSeleccionada;
+    }
+});
 
