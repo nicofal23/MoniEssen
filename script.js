@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //evento para enviar el msj por whatsapp
     document.getElementById("boton").addEventListener("click", function () {
         // Número de teléfono al que deseas enviar el mensaje.
-        const telefono = "+5493416488215";
+        const telefono = "+5493413448143";
         // Obtener el carrito de compras almacenado en el almacenamiento local
         const carritoCompras = JSON.parse(localStorage.getItem("carrito")) || {};
         // Crear el mensaje con la información del carrito
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Abre una nueva ventana o pestaña del navegador con el enlace de WhatsApp
         window.open(url, "_blank");
     });
-    
+
     // Obtener el formulario y el botón
     const navegacionForm = document.getElementById("navegacionForm");
     const irASeccionButton = document.getElementById("irASeccion");
