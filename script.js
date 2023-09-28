@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Crear el párrafo para el texto
         const parrafo = document.createElement("p");
         parrafo.style.cssText = "color: #e878a2; font-size: 19px; font-family: 'mooli', sans-serif;";
-        parrafo.textContent = `Producto: ${idProducto}  `;
+        parrafo.textContent = `·Producto: ${idProducto}  `;
         parrafo.classList.add("detalle-producto");
         // Establecer display: inline-block para el párrafo
         parrafo.style.display = "inline-block";

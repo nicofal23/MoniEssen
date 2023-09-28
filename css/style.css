@@ -312,6 +312,9 @@ header {
   text-underline-position: under;
   /* Colocar el subrayado debajo del texto */ }
 
+.card-img-container img {
+  width: 100%; }
+
 @media (max-width: 831px) {
   .essen {
     flex-direction: column; } }
