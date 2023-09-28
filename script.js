@@ -62,28 +62,62 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     //evento para enviar el msj por whatsapp
-    document.addEventListener("DOMContentLoaded", function () {
-        const boton = document.getElementById("boton");
-        boton.addEventListener("click", function (event) {
-            // Obtener el carrito de compras almacenado en el almacenamiento local
-            const carritoCompras = JSON.parse(localStorage.getItem("carrito")) || {};
-            // Crear una lista de productos para el mensaje
-            const listaProductos = [];
-            for (const idProducto in carritoCompras) {
-                const cantidad = carritoCompras[idProducto].cantidad;
-                const nombreProducto = carritoCompras[idProducto].nombre;
-                listaProductos.push(`${nombreProducto} - Cantidad: ${cantidad}`);
-            }
-            // Crear el mensaje con la lista de productos
-            const mensajeProductos = listaProductos.join("\n");
-            // URL base de WhatsApp
-            const urlWhatsAppBase = "https://api.whatsapp.com/send?phone=+5493416488215&text=";
-            // Combinar la URL base y el mensaje predefinido
-            const urlWhatsApp = urlWhatsAppBase + encodeURIComponent("Me interesan los siguientes productos") + " " + encodeURIComponent(mensajeProductos);
-            // Redirigir al usuario a WhatsApp con el mensaje
-            window.location.href = urlWhatsApp;
-        });
+    document.getElementById("boton").addEventListener("click", function () {
+        // Número de teléfono al que deseas enviar el mensaje.
+        const telefono = "+5493416488215";
+        // Obtener el carrito de compras almacenado en el almacenamiento local
+        const carritoCompras = JSON.parse(localStorage.getItem("carrito")) || {};
+        // Crear el mensaje con la información del carrito
+        let mensaje = "Hola Moni, me interesa una cotizaciòn. Mis productos son:\n";
+        for (const idProducto in carritoCompras) {
+            const cantidad = carritoCompras[idProducto];
+            mensaje += `Producto: ${idProducto}, Cantidad: ${cantidad}\n`;
+        }
+        // Crea el enlace de WhatsApp con el número de teléfono y el mensaje
+        const url = "https://wa.me/" + telefono + "?text=" + encodeURIComponent(mensaje);
+        // Abre una nueva ventana o pestaña del navegador con el enlace de WhatsApp
+        window.open(url, "_blank");
     });
+    
+    // Obtener el formulario y el botón
+    const navegacionForm = document.getElementById("navegacionForm");
+    const irASeccionButton = document.getElementById("irASeccion");
+    const seccionSelect = document.getElementById("seccion");
+
+    // Evento para redirigir al usuario a la página correspondiente
+    irASeccionButton.addEventListener("click", function (event) {
+        event.preventDefault(); // Evitar el envío del formulario
+
+        // Obtener el valor seleccionado en el campo de selección
+        const seccionSeleccionada = seccionSelect.value;
+
+        // Redirigir al usuario a la página correspondiente
+        if (seccionSeleccionada) {
+            window.location.href = seccionSeleccionada;
+        }
+    });
+    // document.addEventListener("DOMContentLoaded", function () {
+    //     const boton = document.getElementById("boton");
+    //     boton.addEventListener("click", function (event) {
+    //         // Obtener el carrito de compras almacenado en el almacenamiento local
+    //         const carritoCompras = JSON.parse(localStorage.getItem("carrito")) || {};
+    //         // Crear una lista de productos para el mensaje
+    //         const listaProductos = [];
+    //         for (const idProducto in carritoCompras) {
+    //             const cantidad = carritoCompras[idProducto].cantidad;
+    //             const nombreProducto = carritoCompras[idProducto].nombre;
+    //             listaProductos.push(`${nombreProducto} - Cantidad: ${cantidad}`);
+    //         }
+    //         // Crear el mensaje con la lista de productos
+    //         const mensajeProductos = listaProductos.join("\n");
+    //         // URL base de WhatsApp
+    //         const urlWhatsAppBase = "https://api.whatsapp.com/send?phone=+5493416488215&text=";
+    //         // Combinar la URL base y el mensaje predefinido
+    //         const urlWhatsApp = urlWhatsAppBase + encodeURIComponent("Me interesan los siguientes productos") + " " + encodeURIComponent(mensajeProductos);
+    //         // Redirigir al usuario a WhatsApp con el mensaje
+    //         window.location.href = urlWhatsApp;
+    //     });
+    // });
 });
 
 

@@ -39,6 +39,21 @@
     </header>
     <main>
         <div class="contenedorcarrito">
+            <form id="navegacionForm">
+                <label for="seccion">Selecciona una sección:</label>
+                <select id="seccion" name="seccion">
+                    <option id="bazar" value="bazar.html">Bazar Premium</option>
+                    <option id="chefSensor" value="acerca.html">Linea Chef Sensor</option>
+                    <option id="complementos" value="servicios.html">Complementos</option>
+                    <option id="terra" value="contacto.html">Linea Contemporánea Terra</option>
+                    <option id="cherry" value="contacto.html">Linea Contemporánea Cherry</option>
+                    <option id="fuego" value="contacto.html">Linea Contemporánea Fuego</option>
+                    <option id="nuit" value="contacto.html">Linea Nuit</option>
+                    <option id="grill" value="contacto.html">Linea Grill</option>
+                    <option id="refugioCanino" value="contacto.html">Refugio Canino</option>
+                </select>
+                <button type="button" id="irASeccion">Ir a Sección</button>
+            </form>
             <div id="carrito" class="carrito">
                 <button><img src="../assets/img/carrito.png" alt=""></button>
                 <span id="cantidadCarrito">0</span>

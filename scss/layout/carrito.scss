@@ -24,3 +24,9 @@
     flex-direction: column;
     width: 50%;
 }
+.contenedorcarrito {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 2.5rem;
+}
