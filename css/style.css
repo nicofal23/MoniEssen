@@ -20,7 +20,7 @@
   background-color: rgba(0, 0, 0, 0.5); }
 
 .modal-contenido {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.021);
   width: 50%;
   max-width: 400px;
   margin: 100px auto;
@@ -39,7 +39,7 @@ body {
 
 .moniessen {
   width: 15.375rem;
-  height: 15.375rem;
+  height: 6.375rem;
   margin: 20px; }
 
 .container-fluid a {
@@ -70,7 +70,8 @@ header {
   header div {
     display: flex;
     align-items: center;
-    margin: 30px; }
+    margin-left: 30px;
+    margin-right: 30px; }
   header .navbar-nav a {
     text-decoration: none;
     color: #e878a2;
@@ -165,6 +166,21 @@ header {
     -webkit-transform: scale(1);
     transform: scale(1); } }
 
+#carrito {
+  border: none;
+  color: #0a0a0a;
+  font-size: 30px;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 70%;
+  padding: 10px 20px; }
+
+#carrito:hover {
+  color: rgba(255, 255, 255, 0);
+  background-color: rgba(130, 236, 135, 0.171); }
+
+#cantidadCarrito {
+  color: black; }
+
 .form {
   display: flex;
   justify-content: center; }
@@ -231,6 +247,10 @@ header {
 .card-button:hover {
   background-color: #0056b3;
   /* Cambia el color de fondo del botón al pasar el cursor sobre él */ }
+
+.navv {
+  display: flex;
+  flex-direction: row-reverse; }
 
 .detalle-producto {
   font-size: 16px;
@@ -314,6 +334,37 @@ header {
 
 .card-img-container img {
   width: 100%; }
+
+/* Estilos para la imagen del logo */
+.moniessen {
+  max-width: 100px;
+  /* Ajusta el tamaño máximo del logo según tus necesidades */ }
+
+/* Estilos para la barra de navegación */
+.navbar {
+  flex: 1;
+  /* Hace que la barra de navegación ocupe el espacio disponible */
+  text-align: center;
+  /* Centra los elementos dentro de la barra de navegación */ }
+
+/* Estilos para el carrito */
+.carrito {
+  display: flex;
+  align-items: center; }
+
+/* Estilos para el botón del carrito */
+.carrito button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  /* Espaciado entre el botón del carrito y la cantidad */ }
+
+/* Estilos para la cantidad en el carrito */
+#cantidadCarrito {
+  font-weight: bold;
+  font-size: 18px;
+  /* Tamaño del texto de la cantidad del carrito */ }
 
 @media (max-width: 831px) {
   .essen {

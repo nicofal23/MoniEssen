@@ -1,3 +1,8 @@
+.navv {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
 .detalle-producto {
     font-size: 16px; /* Tamaño de fuente */
     color: #333; /* Color de texto */
@@ -73,4 +78,36 @@
     img{
         width: 100%;
     }
+}
+
+
+/* Estilos para la imagen del logo */
+.moniessen {
+    max-width: 100px; /* Ajusta el tamaño máximo del logo según tus necesidades */
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+    flex: 1; /* Hace que la barra de navegación ocupe el espacio disponible */
+    text-align: center; /* Centra los elementos dentro de la barra de navegación */
+}
+
+/* Estilos para el carrito */
+.carrito {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos para el botón del carrito */
+.carrito button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px; /* Espaciado entre el botón del carrito y la cantidad */
+}
+
+/* Estilos para la cantidad en el carrito */
+#cantidadCarrito {
+    font-weight: bold;
+    font-size: 18px; /* Tamaño del texto de la cantidad del carrito */
 }
