@@ -16,7 +16,7 @@ function crearTarjeta(producto) {
                 <p class="card-text">Código: ${producto.codigo}</p>
                 <div class="detallesbotones">
                     <button class="btn btn-primary" id="detalle" data-codigo="${producto.codigo}">Ver Detalles</button>
-                    <button class="btn btn-primary agregar-al-carrito" data-codigo="${producto.codigo}" data-nombre="${producto.nombre}">Agregar al carrito</button>
+                    <button class="btn btn-primary agregar-al-carrito" data-codigo="${producto.codigo}" data-nombre="${producto.nombre}" data-detalle="${producto.detalle}">Agregar al carrito</button>
                 </div>
             </div>
         </div>
@@ -61,22 +61,46 @@ document.getElementById("tarjetasContainer").addEventListener("click", function 
     if (event.target.classList.contains("agregar-al-carrito")) {
         const codigo = event.target.dataset.codigo;
         const nombre = event.target.dataset.nombre;
-        agregarAlCarrito(codigo, nombre);
+        const detalle = event.target.dataset.detalle;
+        agregarAlCarrito(codigo, nombre , detalle);
     }
 });
 
 // Función para agregar un producto al carrito
-function agregarAlCarrito(codigo, nombre) {
+function agregarAlCarrito(codigo, nombre, detalle) {
     if (!productoYaEnCarrito(codigo)) {
         let cantidadCarrito = parseInt(localStorage.getItem("cantidadCarrito")) || 0;
         cantidadCarrito++;
-        localStorage.setItem(`producto_${cantidadCarrito}`, JSON.stringify({ codigo, nombre }));
+        localStorage.setItem(`producto_${cantidadCarrito}`, JSON.stringify({ codigo, nombre, detalle }));
         localStorage.setItem("cantidadCarrito", cantidadCarrito);
         actualizarCantidadCarrito(cantidadCarrito);
+
+        // Utiliza SweetAlert para mostrar un mensaje de éxito
+        Swal.fire({
+            position: 'top-start',  // Posición en la parte superior izquierda
+            // icon: 'success',
+            title: 'Producto agregado al carrito',
+            text: `Se ha agregado ${detalle} al carrito.`,
+            showConfirmButton: false,  // No mostrar el botón de confirmación
+            timer: 1500,  // Cerrar después de 1500 milisegundos (1.5 segundos)
+            timerProgressBar: true,  // Mostrar una barra de progreso
+            customClass: {
+                container: 'green-container',  // Clase personalizada para el contenedor
+                popup: 'green-popup',  // Clase personalizada para el cuadro de diálogo
+                title: 'green-title',  // Clase personalizada para el título
+                content: 'green-content',  // Clase personalizada para el contenido
+            },
+        });
     } else {
-        console.log(`El producto con código ${codigo} ya está en el carrito.`);
+        // Utiliza SweetAlert para mostrar un mensaje de advertencia
+        Swal.fire({
+            icon: 'warning',
+            title: 'Producto duplicado',
+            text: `El producto : ${detalle} ya está en el carrito.`,
+        });
     }
 }
+
 // Función para verificar si un producto ya está en el carrito
 function productoYaEnCarrito(codigo) {
     const productosEnCarrito = obtenerProductosEnCarrito();
@@ -256,7 +280,8 @@ function mostrarDetalles(codigo) {
         const modalContent = `
             <div class="modal-header">
                 <h5 class="modal-title">${producto.categoria}</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="custom-close-button" data-bs-dismiss="modal" aria-label="Close"></button>
+
             </div>
             <div class="modal-body">
                 <img src="${producto.imagen}" alt="${producto.nombre}" style="max-width: 100%;">

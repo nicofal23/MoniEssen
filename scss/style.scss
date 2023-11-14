@@ -22,3 +22,44 @@
     flex-direction: column;
     align-items: center
 }
+
+/* Estilo personalizado para el contenedor */
+
+/* Estilo personalizado para el cuadro de diálogo */
+.green-popup {
+    font-size: 14px !important;  /* Cambia el tamaño de la fuente a 14px */
+    width: 40%;
+    height: 40%;
+    background: greenyellow;
+}
+
+/* Estilo personalizado para el título */
+.green-title {
+    color: rgb(0, 0, 0) !important;  /* Cambia el color del título a blanco */
+}
+
+/* Estilo personalizado para el contenido */
+.green-content {
+    color: rgb(8, 8, 8) !important;  /* Cambia el color del contenido a blanco */
+}
+
+/* Estilos personalizados para el botón de cierre del modal */
+.custom-close-button {
+    background: none; /* Eliminar fondo */
+    border: none; /* Eliminar borde */
+    padding: 0; /* Eliminar relleno */
+    font-size: 24px; /* Tamaño de la fuente */
+    color: rgb(14, 13, 13); /* Color del icono de cierre */
+    /* Otros estilos según tus preferencias */
+}
+/* Estilos personalizados para el botón de cierre del modal */
+.close {
+    background: none; /* Eliminar fondo */
+    border: none; /* Eliminar borde */
+    padding: 0; /* Eliminar relleno */
+    font-size: 44px; /* Tamaño de la fuente */
+    color: rgb(0, 0, 0); /* Color del icono de cierre */
+    position: relative;
+    /* Otros estilos según tus preferencias */
+}
+
