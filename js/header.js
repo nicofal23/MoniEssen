@@ -14,11 +14,11 @@ navDiv.innerHTML = `
     <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container-fluid">
             <a class="navbar-brand d-none d-lg-none d-md-none" href="#"><img src="./assets/img/nav1.png" alt="" /></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler order-lg-first" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="right: 0;">
                 <div class="navbar-nav">
                     <a class="nav-link" aria-current="page" href="./index.html">INICIO</a>
                     <!-- Menú desplegable para PRODUCTOS -->
