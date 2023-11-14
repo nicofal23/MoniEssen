@@ -9,3 +9,16 @@
 @import "./media/media431";
 @import "./components/media768";
 
+.col-md-4 {
+    height: 50%;
+} 
+.detallesbotones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.fichatec {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}

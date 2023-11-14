@@ -14,7 +14,10 @@ function crearTarjeta(producto) {
             <div class="card-body">
                 <h5 class="card-title">${producto.detalle}</h5>
                 <p class="card-text">Código: ${producto.codigo}</p>
-                <button class="btn btn-primary agregar-al-carrito" data-codigo="${producto.codigo}" data-nombre="${producto.nombre}">Agregar al carrito</button>
+                <div class="detallesbotones">
+                    <button class="btn btn-primary" onclick="mostrarDetalles(productos[0])">Ver Detalles</button>
+                    <button class="btn btn-primary agregar-al-carrito" data-codigo="${producto.codigo}" data-nombre="${producto.nombre}">Agregar al carrito</button>
+                </div>
             </div>
         </div>
     `;
@@ -219,3 +222,33 @@ document.getElementById("comprarBtn").addEventListener("click", function () {
 });
 
 
+
+
+//modal de detalle
+
+
+function mostrarDetalles(producto) {
+    // Crear el contenido del modal
+    const modalContent = `
+        <div class="modal-header">
+            <h5 class="modal-title">${producto.categoria}</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <img src="${producto.imagen}" alt="${producto.nombre}" style="max-width: 100%;">
+            <p><strong>Articulo:</strong> ${producto.detalle}</p>
+            <div class="fichatec">
+                <p><strong>Ficha Técnica:</strong></p>
+                <pre>${producto.fichaTecnica}</pre>
+                <p><strong>Código:</strong> ${producto.codigo}</p>
+            </div>
+        </div>
+    `;
+
+    // Colocar el contenido en el modal
+    document.getElementById('detallesModalBody').innerHTML = modalContent;
+
+    // Mostrar el modal
+    const myModal = new bootstrap.Modal(document.getElementById('detallesModal'));
+    myModal.show();
+}

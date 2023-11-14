@@ -1,29 +1,34 @@
 const ContemporaneaFuego = [
     {
-        nombre: "1",
-        imagen: "https://i.ibb.co/Lvw5Mh5/Utensillospasta.jpg",
-        fichaTecnica: "",
-        codigo: "60050012"
-    },
-    {
-        nombre: "2",
-        imagen: "https://i.ibb.co/Lvw5Mh5/Utensillospasta.jpg",
-        fichaTecnica: "",
-        codigo: "60050021"
-    },
-    {
-        nombre: "3",
-        imagen: "https://i.ibb.co/Lvw5Mh5/Utensillospasta.jpg",
-        fichaTecnica: "",
-        codigo: "60050028"
+        nombre: "ContemporaneaFuego",
+        categoria:"Contemporanea Fuego",
+        detalle: "Cacelora 24 cm",
+        imagen: "https://www.essen.com.ar/imgs/w528-h297-c528.297/contenido/objetos/1/Sarten%2024%20Fuego%20web.jpg",
+        fichaTecnica:   "<strong>Comensales:</strong> 4\n" +
+                        "<strong>Capacidad:</strong> 4,5 lts\n" +
+                        "<strong>Diámetro:</strong> 24 cm",
+        codigo: "38452475"
     },
     {
         nombre: "ContemporaneaFuego",
-        imagen: "https://i.ibb.co/Lvw5Mh5/Utensillospasta.jpg",
-        fichaTecnica: "",
-        codigo: "60050045"
+        categoria:"Contemporanea Fuego",
+        detalle:"Sartén 24 cm",
+        imagen: "https://www.essen.com.ar/contenido/objetos/1/Sarten%2024%20Fuego.png",
+        fichaTecnica:   "<strong>Comensales:</strong> 4\n" +
+                        "<strong>Capacidad:</strong> 4,5 lts\n" +
+                        "<strong>Diámetro:</strong> 24 cm",
+        codigo: "38252475"
     },
-    // Añade más objetos según sea necesario
+    {
+        nombre: "ContemporaneaFuego",
+        categoria:"Contemporanea Fuego",
+        detalle:"Cacerola 18 cm",
+        imagen: "https://www.essen.com.ar/imgs/w528-h297-c528.297/contenido/objetos/1/Cacerola%2018%20Fuego.png",
+        fichaTecnica:   "<strong>Comensales:</strong> 4\n" +
+                        "<strong>Capacidad:</strong> 4,5 lts\n" +
+                        "<strong>Diámetro:</strong> 24 cm",
+        codigo: "38351875"
+    },
 ];
 
 const ContemporaneaCherry = [
