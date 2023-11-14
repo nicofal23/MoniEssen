@@ -34,65 +34,159 @@ const ContemporaneaFuego = [
 const ContemporaneaCherry = [
     {
         nombre: "ContemporaneaCherry",
-        detalle: "mundo",
-        imagen: "https://i.ibb.co/Lvw5Mh5/Utensillospasta.jpg",
-        fichaTecnica: "",
-        codigo: "60050012"
+        categoria:"Contemporanea Cherry",
+        detalle: "Sartén Express Cherry",
+        imagen: "https://www.essen.com.ar/imgs/w528-h297-c528.297/contenido/objetos/1/Sarten%20express_cherry_web.jpg",
+        fichaTecnica:   "<strong>Comensales:</strong> 1\n" +
+                        "<strong>Capacidad:</strong> 0,5 lts\n" +
+                        "<strong>Diámetro:</strong> 18 cm",
+        codigo: "38222052"
     },
     {
         nombre: "ContemporaneaCherry",
-        detalle:"nico es crack",
-        imagen: "https://i.ibb.co/Lvw5Mh5/Utensillospasta.jpg",
-        fichaTecnica: "",
-        codigo: "60050021"
+        categoria:"Contemporanea Cherry",
+        detalle: "Cacerola 24 cm",
+        imagen: "https://www.essen.com.ar/imgs/w528-h297-c528.297/contenido/objetos/1/Cacerola_28_Cherry.png",
+        fichaTecnica:   "<strong>Comensales:</strong> 4\n" +
+                        "<strong>Capacidad:</strong> 4,5 lts\n" +
+                        "<strong>Diámetro:</strong> 24 cm",
+        codigo: "38452478"
     },
     {
-        nombre: "6",
-        imagen: "https://i.ibb.co/Lvw5Mh5/Utensillospasta.jpg",
-        fichaTecnica: "",
-        codigo: "60050028"
+        nombre: "ContemporaneaCherry",
+        categoria:"Contemporanea Cherry",
+        detalle: "Sartén 24 cm",
+        imagen: "https://www.essen.com.ar/contenido/objetos/1/Sarten_24_Cherry.png",
+        fichaTecnica:   "<strong>Comensales:</strong> 3\n" +
+                        "<strong>Capacidad:</strong> 2,8 lts\n" +
+                        "<strong>Diámetro:</strong> 24 cm",
+        codigo: "sincodigo"
     },
     {
-        nombre: "7",
-        imagen: "https://i.ibb.co/Lvw5Mh5/Utensillospasta.jpg",
-        fichaTecnica: "",
-        codigo: "60050045"
+        nombre: "ContemporaneaCherry",
+        categoria:"Contemporanea Cherry",
+        detalle: "Cacerola con mango 18cm",
+        imagen: "https://www.essen.com.ar/contenido/objetos/1/cherrycacerolaconmango18cm%20copy.jpg",
+        fichaTecnica:   "<strong>Comensales:</strong> 2\n" +
+                        "<strong>Capacidad:</strong> 2,1 lts\n" +
+                        "<strong>Diámetro:</strong> 18 cm",
+        codigo: "38351878"
+    },
+    {
+        nombre: "ContemporaneaCherry",
+        categoria:"Contemporanea Cherry",
+        detalle: "Cacerola 8 litros",
+        imagen: "https://www.essen.com.ar/contenido/objetos/1/cacerola_8lts_cherry.jpg",
+        fichaTecnica:   "<strong>Comensales:</strong> 8\n" +
+                        "<strong>Capacidad:</strong> 8,8 lts\n" +
+                        "<strong>Diámetro:</strong> 28 cm",
+        codigo: "38453078"
+    },
+    {
+        nombre: "ContemporaneaCherry",
+        categoria:"Contemporanea Cherry",
+        detalle: "Flip 2.1",
+        imagen: "https://www.essen.com.ar/contenido/objetos/1/Flip%2021%20Cherry.jpg",
+        fichaTecnica:   "<strong>Comensales:</strong> 2\n" +
+                        "<strong>Capacidad:</strong> 2 lts\n" +
+                        "<strong>Diámetro:</strong> 22cm x 22cm",
+        codigo: "38122819"
+    },
+    {
+        nombre: "ContemporaneaCherry",
+        categoria:"Contemporanea Cherry",
+        detalle: "Jarro Quick",
+        imagen: "https://www.essen.com.ar/contenido/objetos/1/Jarro%20Quick%20Cherry%20copy.jpg",
+        fichaTecnica:   "<strong>Comensales:</strong> 2\n" +
+                        "<strong>Capacidad:</strong> 1,7 lts\n" +
+                        "<strong>Diámetro:</strong> 16cm",
+        codigo: "38121752"
     },
 ];
 
 const ContemporaneaTerra = [
     {
-        nombre: "8",
-        imagen: "https://i.ibb.co/Lvw5Mh5/Utensillospasta.jpg",
-        fichaTecnica: "",
-        codigo: "60050012"
+        nombre: "ContemporaneaTerra",
+        categoria:"Contemporanea Terra",
+        detalle: "Cacerola Cuadrada 29cm",
+        imagen: "https://www.essen.com.ar/contenido/objetos/1/terracacerolacuadrada30cm.jpg",
+        fichaTecnica:   "<strong>Comensales:</strong> 6\n" +
+                        "<strong>Capacidad:</strong> 6,4 lts\n" +
+                        "<strong>Diámetro:</strong> 29cm",
+        codigo: "38752966"
     },
     {
-        nombre: "9",
-        imagen: "https://i.ibb.co/Lvw5Mh5/Utensillospasta.jpg",
-        fichaTecnica: "",
-        codigo: "60050021"
+        nombre: "ContemporaneaTerra",
+        categoria:"Contemporanea Terra",
+        detalle: "Sartén 24cm",
+        imagen: "https://www.essen.com.ar/contenido/objetos/1/terrasarten24cm.jpg",
+        fichaTecnica:   "<strong>Comensales:</strong> 4\n" +
+                        "<strong>Capacidad:</strong> 2,8 lts\n" +
+                        "<strong>Diámetro:</strong> 24cm",
+        codigo: "38252466"
     },
     {
-        nombre: "10",
-        imagen: "https://i.ibb.co/Lvw5Mh5/Utensillospasta.jpg",
-        fichaTecnica: "",
-        codigo: "60050028"
+        nombre: "ContemporaneaTerra",
+        categoria:"Contemporanea Terra",
+        detalle: "Sartén con asas 31cm",
+        imagen: "https://www.essen.com.ar/contenido/objetos/1/terrasartenconasas31cm.jpg",
+        fichaTecnica:   "<strong>Comensales:</strong> 5\n" +
+                        "<strong>Capacidad:</strong> 4 lts\n" +
+                        "<strong>Diámetro:</strong> 31cm",
+        codigo: "38653166"
     },
     {
-        nombre: "11",
-        imagen: "https://i.ibb.co/Lvw5Mh5/Utensillospasta.jpg",
-        fichaTecnica: "",
-        codigo: "60050045"
+        nombre: "ContemporaneaTerra",
+        categoria:"Contemporanea Terra",
+        detalle: "Cacerola Cuadrada 24cm",
+        imagen: "https://www.essen.com.ar/contenido/objetos/1/Cuadrada%2024cm%20Terra.jpg",
+        fichaTecnica:   "<strong>Comensales:</strong> 4\n" +
+                        "<strong>Capacidad:</strong> 3,7 lts\n" +
+                        "<strong>Diámetro:</strong> 24cm",
+        codigo: "38752466"
     },
-];
+    {
+        nombre: "ContemporaneaTerra",
+        categoria:"Contemporanea Terra",
+        detalle: "Bifera con asas",
+        imagen: "https://www.essen.com.ar/contenido/objetos/1/terrabiferaconasas.jpg",
+        fichaTecnica:   "<strong>Comensales:</strong> 4\n" +
+                        "<strong>Capacidad:</strong> 3,3 lts\n" +
+                        "<strong>Diámetro:</strong> 33cm X 23cm",
+        codigo: "38753366"
+    },
+    {
+        nombre: "ContemporaneaTerra",
+        categoria:"Contemporanea Terra",
+        detalle: "Cacerola con mango 18cm",
+        imagen: "https://www.essen.com.ar/contenido/objetos/1/terracacerolaconmango18cm.jpg",
+        fichaTecnica:   "<strong>Comensales:</strong> 2\n" +
+                        "<strong>Capacidad:</strong> 2,1 lts\n" +
+                        "<strong>Diámetro:</strong> 18cm",
+        codigo: "38351866"
+    },
+    {
+        nombre: "ContemporaneaTerra",
+        categoria:"Contemporanea Terra",
+        detalle: "Cacerola 24cm",
+        imagen: "https://www.essen.com.ar/contenido/objetos/1/terracacerola24cm.jpg",
+        fichaTecnica:   "<strong>Comensales:</strong> 4\n" +
+                        "<strong>Capacidad:</strong> 4,5 lts\n" +
+                        "<strong>Diámetro:</strong> 24cm",
+        codigo: "38452466"
+    },
+];//me quede en cacerola terra 
 
 const ContemporaneaAqua = [
     {
-        nombre: "12",
-        imagen: "https://i.ibb.co/Lvw5Mh5/Utensillospasta.jpg",
-        fichaTecnica: "",
-        codigo: "60050012"
+        nombre: "ContemporaneaAqua",
+        categoria:"Contemporanea Aqua",
+        detalle: "Sartén 24 cm ",
+        imagen: "https://www.essen.com.ar/contenido/objetos/1/aquasarten24cm.jpg",
+        fichaTecnica:   "<strong>Comensales:</strong> 4\n" +
+                        "<strong>Capacidad:</strong> 2,8 lts\n" +
+                        "<strong>Diámetro:</strong> 24cm",
+        codigo: "sincodigo2"
     },
     {
         nombre: "13",

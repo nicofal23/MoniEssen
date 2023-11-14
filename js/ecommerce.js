@@ -15,7 +15,7 @@ function crearTarjeta(producto) {
                 <h5 class="card-title">${producto.detalle}</h5>
                 <p class="card-text">Código: ${producto.codigo}</p>
                 <div class="detallesbotones">
-                    <button class="btn btn-primary" onclick="mostrarDetalles(productos[0])">Ver Detalles</button>
+                    <button class="btn btn-primary" id="detalle" data-codigo="${producto.codigo}">Ver Detalles</button>
                     <button class="btn btn-primary agregar-al-carrito" data-codigo="${producto.codigo}" data-nombre="${producto.nombre}">Agregar al carrito</button>
                 </div>
             </div>
@@ -227,28 +227,56 @@ document.getElementById("comprarBtn").addEventListener("click", function () {
 //modal de detalle
 
 
-function mostrarDetalles(producto) {
-    // Crear el contenido del modal
-    const modalContent = `
-        <div class="modal-header">
-            <h5 class="modal-title">${producto.categoria}</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <img src="${producto.imagen}" alt="${producto.nombre}" style="max-width: 100%;">
-            <p><strong>Articulo:</strong> ${producto.detalle}</p>
-            <div class="fichatec">
-                <p><strong>Ficha Técnica:</strong></p>
-                <pre>${producto.fichaTecnica}</pre>
-                <p><strong>Código:</strong> ${producto.codigo}</p>
+// Event listener para el botón "Ver Detalles"
+document.addEventListener('click', function (event) {
+    if (event.target.id === 'detalle') {
+        // Obtener el código del producto
+        const codigoProducto = event.target.getAttribute('data-codigo');
+        // Mostrar los detalles del producto
+        mostrarDetalles(codigoProducto);
+    }
+});
+
+function mostrarDetalles(codigo) {
+    // Buscar el producto en ContemporaneaFuego
+    const productoFuego = ContemporaneaFuego.find(producto => producto.codigo === codigo);
+    // Si no se encuentra en ContemporaneaFuego, buscar en ContemporaneaCherry
+    const productoCherry = ContemporaneaCherry.find(producto => producto.codigo === codigo);
+    // Buscar en ContemporaneaTerra
+    const productoTerra = ContemporaneaTerra.find(producto => producto.codigo === codigo);
+    // Buscar en ContemporaneaAqua
+    const productoAqua = ContemporaneaAqua.find(producto => producto.codigo === codigo);
+
+    // Determinar de cuál array proviene el producto
+    const producto = productoFuego || productoCherry || productoTerra || productoAqua;
+
+    // Verificar si se encontró el producto
+    if (producto) {
+        // Crear el contenido del modal
+        const modalContent = `
+            <div class="modal-header">
+                <h5 class="modal-title">${producto.categoria}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-        </div>
-    `;
+            <div class="modal-body">
+                <img src="${producto.imagen}" alt="${producto.nombre}" style="max-width: 100%;">
+                <p><strong>Articulo:</strong> ${producto.detalle}</p>
+                <div class="fichatec">
+                    <p><strong>Ficha Técnica:</strong></p>
+                    <pre>${producto.fichaTecnica}</pre>
+                    <p><strong>Código:</strong> ${producto.codigo}</p>
+                </div>
+            </div>
+        `;
 
-    // Colocar el contenido en el modal
-    document.getElementById('detallesModalBody').innerHTML = modalContent;
+        // Colocar el contenido en el modal
+        document.getElementById('detallesModalBody').innerHTML = modalContent;
 
-    // Mostrar el modal
-    const myModal = new bootstrap.Modal(document.getElementById('detallesModal'));
-    myModal.show();
+        // Mostrar el modal
+        const myModal = new bootstrap.Modal(document.getElementById('detallesModal'));
+        myModal.show();
+    } else {
+        // Si no se encuentra el producto, mostrar un mensaje de error
+        alert("Producto no encontrado");
+    }
 }
