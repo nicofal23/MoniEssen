@@ -1,3 +1,11 @@
+document.addEventListener('DOMContentLoaded', function () {
+    // Obtén la cantidad de productos en el carrito del localStorage
+    const cantidadCarrito = parseInt(localStorage.getItem("cantidadCarrito")) || 0;
+
+    // Actualiza la cantidad del carrito en la interfaz de usuario
+    actualizarCantidadCarrito(cantidadCarrito);
+});
+
 // Función para limpiar el contenido del carrusel y la descripción Essen
 function limpiarContenido() {
     document.getElementById("carouselExampleInterval").innerHTML = "";
@@ -305,3 +313,37 @@ function mostrarDetalles(codigo) {
         alert("Producto no encontrado");
     }
 }
+
+
+
+
+//icono whatsapp
+
+// Función para mostrar y luego ocultar el mensaje
+function mostrarMensaje() {
+    const mensaje = document.getElementById("mensaje");
+
+    // Mostrar el mensaje después de 5 segundos
+    setTimeout(function () {
+        mensaje.style.display = "block";
+    }, 5000);
+
+    // Esperar 4 segundos después de mostrar el mensaje
+    setTimeout(function () {
+        // Ocultar el mensaje con un balanceo
+        mensaje.style.marginLeft = "0"; // Muestra el mensaje desplazándolo desde la izquierda
+        setTimeout(function () {
+            mensaje.style.display = "none"; // Oculta el mensaje desplazándolo fuera de la pantalla
+        }, 500); // Tiempo de espera antes de ocultar completamente
+    }, 9000);
+
+}
+
+// Llamar a la función después de cargar la página
+window.onload = function () {
+    mostrarMensaje();
+};
+setTimeout(function() {
+    const mensaje = document.getElementById("mensaje");
+    mensaje.classList.add("mensaje-vibrante");
+}, 5000);

@@ -4,40 +4,88 @@ const headerContainer = document.getElementById('headerContainer');
 // Crear el elemento div para el logo
 const logoDiv = document.createElement('div');
 logoDiv.innerHTML = `
-    <a href="./index.html"><img src="./assets/img/moniessen.png" alt="MoniEssen" class="moniessen"></a>
+<a href="./index.html"><img src="./assets/img/moniessen.png" alt="MoniEssen" class="moniessen"></a>
 `;
 headerContainer.appendChild(logoDiv);
 
 // Crear el elemento div para el menú de navegación
 const navDiv = document.createElement('div');
 navDiv.innerHTML = `
-    <nav class="navbar navbar-expand-lg custom-navbar">
-        <div class="container-fluid">
-            <a class="navbar-brand d-none d-lg-none d-md-none" href="#"><img src="./assets/img/nav1.png" alt="" /></a>
-            <button class="navbar-toggler order-lg-first" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="right: 0;">
-                <div class="navbar-nav">
-                    <a class="nav-link" aria-current="page" href="./index.html">INICIO</a>
-                    <!-- Menú desplegable para PRODUCTOS -->
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<div class="container-fluid">
+    <a href="./index.html"><img src="./assets/img/moniessen.png" alt="MoniEssen" class="moniessen"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="./index.html">INICIO</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProductos" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    PRODUCTOS
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownProductos">
+                    <li><a class="dropdown-item" href="#" id="todoslosproductos">Todos los productos</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Descargar Catálogo</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">RECETAS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">CONTACTO</a>
+            </li>
+        </ul>
+    </div>
+    <div id="carrito" class="carrito">
+        <button id="carritoBtn"><img src="./assets/img/carrito.png" alt=""></button>
+        <span id="cantidadCarrito">0</span>
+</div>
+</nav>
+<!-- Modal lateral -->
+<div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="menuModalLabel">Menú</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <!-- Menú de hamburguesa y submenús -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">INICIO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link dropdown-toggle" href="#" id="todoslosproductos" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         PRODUCTOS
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" id="todoslosproductos" href="#">Todos los productos</a></li>
-                        <li><hr class="dropdown-divider"></li>                        
-                        <li><a class="dropdown-item" href="https://www.essen.com.ar/contenido/editor/File/essen-ciclo-7.pdf" target="_blank">Descargar Catalogo</a></li>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownProductosModal">
+                        <li><a class="dropdown-item" href="#">Todos los productos</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Descargar Catálogo</a></li>
                     </ul>
-                    <!-- Fin del menú desplegable -->
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#">RECETAS</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#">CONTACTO</a>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+    </div>
+</div>
+</div>
+           
 `;
 headerContainer.appendChild(navDiv);
 

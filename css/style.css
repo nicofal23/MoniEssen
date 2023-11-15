@@ -489,23 +489,13 @@ header {
     flex-direction: column; } }
 
 @media (max-width: 673px) {
-  header {
-    flex-direction: column; }
-    header div {
-      display: flex;
-      flex-direction: column; }
   .essen img {
     width: 90%;
     margin: 15px; }
   .container-fluid {
-    margin: 0px; }
-  .navbar {
-    width: 112px; } }
+    margin: 0px; } }
 
 @media (max-width: 435px) {
-  header div nav ul {
-    display: flex;
-    flex-direction: column; }
   .form-group {
     display: flex;
     flex-direction: column;
@@ -588,3 +578,64 @@ header {
   /* Color del icono de cierre */
   position: relative;
   /* Otros estilos según tus preferencias */ }
+
+.fixed-top {
+  position: unset;
+  z-index: 0; }
+
+.navbar-collapse {
+  justify-content: center; }
+
+footer {
+  background-color: transparent;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative; }
+
+.social-icons img,
+.whatsapp-icon img {
+  width: 30px;
+  /* Ajusta el tamaño según tus necesidades */
+  height: auto;
+  margin: 0 10px;
+  cursor: pointer; }
+
+.whatsapp-icon {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  /* Ajusta el valor según sea necesario para que esté por encima de otros elementos */
+  height: 40px; }
+
+.message-container {
+  background-color: #58e95e;
+  /* Verde */
+  color: #000000;
+  /* Negro */
+  padding: 10px;
+  border-radius: 5px;
+  /* Esquinas redondeadas */
+  display: none;
+  /* Para que el fondo verde se ajuste al contenido */
+  margin-right: 10px;
+  /* Espacio entre el mensaje y el icono de WhatsApp */ }
+
+@keyframes vibrar {
+  0% {
+    transform: translate(0); }
+  25% {
+    transform: translate(-2px, 2px); }
+  50% {
+    transform: translate(2px, -2px); }
+  75% {
+    transform: translate(-2px, 2px); }
+  100% {
+    transform: translate(0); } }
+
+.mensaje-vibrante {
+  animation: vibrar 0.3s infinite;
+  /* Puedes ajustar la duración según tus preferencias */ }
