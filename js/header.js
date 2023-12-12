@@ -39,7 +39,7 @@ navDiv.innerHTML = `
                 <a class="nav-link" href="#">RECETAS</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">CONTACTO</a>
+                <a class="nav-link" href="../pages/contacto.html">CONTACTO</a>
             </li>
         </ul>
     </div>
